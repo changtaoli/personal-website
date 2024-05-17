@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李长涛的个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            margin-top: 0;
+        }
+        .language-switch {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .language-switch button {
+            padding: 5px 10px;
+            margin-left: 5px;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                element.style.display = element.getAttribute('data-lang') === lang ? 'block' : 'none';
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('zh');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>李长涛的个人主页</h1>
+    </header>
+    <div class="container">
+        <div class="language-switch">
+            <button onclick="switchLanguage('zh')">中文</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+        <div class="section">
+            <h2 data-lang="zh">个人简介</h2>
+            <h2 data-lang="en" style="display:none;">About Me</h2>
+            <p data-lang="zh">我是李长涛，2024年应届博士毕业生，现就读于中国科学院声学研究所，研究方向为基于生成模型的语音增强与频带扩展。</p>
+            <p data-lang="en" style="display:none;">I am Changtao Li, a 2024 PhD graduate from the Institute of Acoustics, Chinese Academy of Sciences. My research focuses on speech enhancement and bandwidth extension using generative models.</p>
+        </div>
+        <div class="section">
+            <h2 data-lang="zh">简历</h2>
+            <h2 data-lang="en" style="display:none;">Resume</h2>
+            <h3 data-lang="zh">教育背景</h3>
+            <h3 data-lang="en" style="display:none;">Education</h3>
+            <ul>
+                <li data-lang="zh">博士，信号与信息处理，中国科学院声学研究所，2019.09至今，导师：杨军、杨飞然</li>
+                <li data-lang="en" style="display:none;">Ph.D. in Signal and Information Processing, Institute of Acoustics, Chinese Academy of Sciences, 2019.09-Present, Advisors: Jun Yang, Feiran Yang</li>
+                <li data-lang="zh">交换生，物理专业，加州大学伯克利分校，2018.08-2018.12，GPA：4.0/4.0</li>
+                <li data-lang="en" style="display:none;">Exchange Student, Physics, University of California, Berkeley, 2018.08-2018.12, GPA: 4.0/4.0</li>
+                <li data-lang="zh">学士，物理专业，中国科学院大学，2015.09-2019.07，GPA：3.83/4.0</li>
+                <li data-lang="en" style="display:none;">Bachelor's in Physics, University of Chinese Academy of Sciences, 2015.09-2019.07, GPA: 3.83/4.0</li>
+            </ul>
+            <h3 data-lang="zh">专业技能</h3>
+            <h3 data-lang="en" style="display:none;">Skills</h3>
+            <ul>
+                <li data-lang="zh">掌握现有基于DNN的语音增强，频带恢复算法</li>
+                <li data-lang="en" style="display:none;">Proficient in DNN-based speech enhancement and bandwidth restoration algorithms</li>
+                <li data-lang="zh">掌握GAN，Diffusion以及Flow等生成模型算法</li>
+                <li data-lang="en" style="display:none;">Skilled in generative models such as GAN, Diffusion, and Flow</li>
+                <li data-lang="zh">熟练掌握Python等编程语言及PyTorch、TensorFlow与Keras等深度学习工具</li>
+                <li data-lang="en" style="display:none;">Proficient in programming languages like Python and deep learning tools such as PyTorch, TensorFlow, and Keras</li>
+                <li data-lang="zh">掌握Adobe Photoshop、Illustrator等平面设计工具</li>
+                <li data-lang="en" style="display:none;">Experienced with graphic design tools like Adobe Photoshop and Illustrator</li>
+                <li data-lang="zh">熟练掌握英语，TOEFL 106（R 30，L 30，S 24，W 22），GRE 330+3.5（Q 168，V 162）</li>
+                <li data-lang="en" style="display:none;">Proficient in English, TOEFL 106 (R 30, L 30, S 24, W 22), GRE 330+3.5 (Q 168, V 162)</li>
+                <li data-lang="zh">担任TASLP等期刊的审稿人</li>
+                <li data-lang="en" style="display:none;">Reviewer for journals like TASLP</li>
+            </ul>
+            <h3 data-lang="zh">博士课题</h3>
+            <h3 data-lang="en" style="display:none;">Doctoral Projects</h3>
+            <ul>
+                <li data-lang="zh">长时关联在合成语音检测中的作用</li>
+                <li data-lang="en" style="display:none;">The Role of Long-Term Dependency in Synthetic Speech Detection</li>
+                <li data-lang="zh">融合语音的多尺度信息进行合成语音检测</li>
+                <li data-lang="en" style="display:none;">Multi-scale Information Aggregation for Spoofing Detection</li>
+                <li data-lang="zh">一种完全基于注意力机制的生成对抗网络声码器</li>
+                <li data-lang="en" style="display:none;">An Attention-Based GAN Vocoder</li>
+                <li data-lang="zh">语音合成声码器在语音频谱恢复中的应用</li>
+                <li data-lang="en" style="display:none;">Application of Speech Synthesis Vocoder in Speech Spectrum Restoration</li>
+                <li data-lang="zh">一种时域语音频带扩展办法</li>
+                <li data-lang="en" style="display:none;">A Temporal Domain Speech Bandwidth Extension Method</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 data-lang="zh">工程项目</h2>
+            <h2 data-lang="en" style="display:none;">Engineering Projects</h2>
+            <ul>
+                <li data-lang="zh">骨导语音频带扩展系统的部署</li>
+                <li data-lang="en" style="display:none;">Deployment of Bone-Conducted Speech Bandwidth Extension System</li>
+                <li data-lang="zh">基于Diffusion的语音频谱恢复</li>
+                <li data-lang="en" style="display:none;">Speech Spectrum Restoration Based on Diffusion</li>
+                <li data-lang="zh">基于SoundStream音频编码的语音降噪</li>
+                <li data-lang="en" style="display:none;">Speech Denoising Based on SoundStream Audio Encoding</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 data-lang="zh">科研成果</h2>
+            <h2 data-lang="en" style="display:none;">Research Publications</h2>
+            <ul>
+                <li data-lang="zh">C. Li, F. Yang, and J. Yang, "The Role of Long-Term Dependency in Synthetic Speech Detection," IEEE Signal Processing Letters, vol. 29, pp. 1142-1146, 2022.</li>
+                <li data-lang="en" style="display:none;">C. Li, F. Yang, and J. Yang, "The Role of Long-Term Dependency in Synthetic Speech Detection," IEEE Signal Processing Letters, vol. 29, pp. 1142-1146, 2022.</li>
+                <li data-lang="zh">C. Li, F. Yang, and J. Yang, "A Two-stage Approach to Quality Restoration of Bone-conducted Speech," IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 32, pp. 818-829, 2024.</li>
+                <li data-lang="en" style="display:none;">C. Li, F. Yang, and J. Yang, "A Two-stage Approach to Quality Restoration of Bone-conducted Speech," IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 32, pp. 818-829, 2024.</li>
+                <li data-lang="zh">C. Li, F. Yang, and J. Yang, “Restoration of Bone-Conducted Speech with U-Net-like Model and Energy Distance Loss,” IEEE Signal Processing Letters, vol. 31, pp. 166-170, 2024.</li>
+                <li data-lang="en" style="display:none;">C. Li, F. Yang, and J. Yang, “Restoration of Bone-Conducted Speech with U-Net-like Model and Energy Distance Loss,” IEEE Signal Processing Letters, vol. 31, pp. 166-170, 2024.</li>
+                <li data-lang="zh">C. Li, Y. Wan, F. Yang, and J. Yang, “Multi-scale Information Aggregation for Spoofing Detection,” EURASIP Journal on Audio, Speech, and Music Processing. (under revision)</li>
+                <li data-lang="en" style="display:none;">C. Li, Y. Wan, F. Yang, and J. Yang, “Multi-scale Information Aggregation for Spoofing Detection,” EURASIP Journal on Audio, Speech, and Music Processing. (under revision)</li>
+                <li data-lang="zh">C. Li, F. Yang, and J. Yang, “Multi-Modal Speech Enhancement with BiNet and Contrastive Learning,” IEEE/ACM Transactions on Audio, Speech, and Language Processing. (under review)</li>
+                <li data-lang="en" style="display:none;">C. Li, F. Yang, and J. Yang, “Multi-Modal Speech Enhancement with BiNet and Contrastive Learning,” IEEE/ACM Transactions on Audio, Speech, and Language Processing. (under review)</li>
+                <li data-lang="zh">李长涛，万伊，杨飞然，杨军，“基于深度自注意力神经网络分类器的合成语音检测方法” CN 114898773 A，2022.08.12。（发明专利，已公开）</li>
+                <li data-lang="en" style="display:none;">Changtao Li, Yi Wan, Feiran Yang, and Jun Yang, “Synthetic Speech Detection Method Based on Deep Self-Attention Neural Network Classifier” CN 114898773 A, 2022.08.12. (Patent, Published)</li>
+                <li data-lang="zh">李长涛，杨飞然，杨军，“一种用于带宽受限语音质量盲恢复的两阶段方法” CN202311503693.1 2023-11-13。（发明专利，已公开）</li>
+                <li data-lang="en" style="display:none;">Changtao Li, Feiran Yang, and Jun Yang, “A Two-Stage Method for Blind Quality Restoration of Bandwidth-Limited Speech” CN202311503693.1 2023-11-13. (Patent, Published)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 data-lang="zh">获奖及证书</h2>
+            <h2 data-lang="en" style="display:none;">Awards and Certificates</h2>
+            <ul>
+                <li data-lang="zh">2022.06 中国科学院大学三好学生</li>
+                <li data-lang="en" style="display:none;">2022.06 Excellent Student, University of Chinese Academy of Sciences</li>
+                <li data-lang="zh">2015.09至今 在国科大多次获得国家级、校级奖学金</li>
+                <li data-lang="en" style="display:none;">2015.09-Present Multiple National and University Scholarships at UCAS</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
